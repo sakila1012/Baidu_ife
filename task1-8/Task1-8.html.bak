@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Task1-8</title>
+		<style>
+			*{padding:0;margin:0}
+			body{font-size:14px;font-family:"微软雅黑";background:#fff;}
+			a{text-decoration:none;color:#fff;}
+			.grid-container{
+				width:100%;
+				padding:10px;
+				margin:0 auto;
+			}
+			.row:before, .row:after{
+				content:"";
+				display:table;
+				clear:both;
+			}
+			/*给每个块添加基础样式*/
+			[class*='col-']{
+				float:left;
+				padding:12px;
+				box-sizing:border-box;
+				border-color:#eee;
+				border:1px solid #999;
+				margin:10px;
+				height:50px;
+				text-align:center;
+			}
+			/*大于768px*/
+			@media (min-width:769px){
+				.col-md-1{
+					width:calc(8.333% - 20px);
+				}
+				.col-md-2{
+					width:calc(16.666% - 20px);
+				}
+				.col-md-3{
+					width:calc(25% - 20px);
+				}
+				.col-md-4{
+					width:calc(33.333% - 20px);
+				}
+				.col-md-6{
+					width:calc(50% - 20px);
+				}
+			}
+			/*小于768px*/
+			@media (max-width:768px){
+				.col-sm-2{
+					width:calc(16.666% - 20px);
+				}
+				.col-sm-3{
+					width:calc(25% - 20px);
+				}
+				.col-sm-6{
+					width:calc(50% - 20px);
+				}
+				.col-sm-8{
+					width:calc(75% - 20px);
+				}
+				.col-sm-12{
+					width:calc(100% - 20px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid-container outline">
+			<div class="row">
+				<div class="col-md-4 col-sm-6">col-4</div>
+				<div class="col-md-4 col-sm-6">col-4</div>
+				<div class="col-md-4 col-sm-12">col-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-3">col-3</div>
+				<div class="col-md-6 col-sm-6">col-6</div>
+				<div class="col-md-3 col-sm-3">col-3</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1 col-sm-2">col-1</div>
+				<div class="col-md-1 col-sm-2">col-1</div>
+				<div class="col-md-2 col-sm-8">col-2</div>
+				<div class="col-md-2 col-sm-3">col-2</div>
+				<div class="col-md-6 col-sm-3">col-6</div>
+			</div>
+		</div>
+	</body>
+</html>
