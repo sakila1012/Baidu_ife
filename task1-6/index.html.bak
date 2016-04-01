@@ -22,6 +22,9 @@
 			.main-top-box{overflow:hidden;}
 			.article1-left-box{width:640px;float:left;position:relative;}
 			.img{width:640px;height:300px;border:1px solid #ccc;}
+			.cover1{background:#adc2a4;left:0;}
+			.cover2{background:#adc2a4;right:0;}
+			.cover3{display:block;width:190px;height:300px;opacity:0.5;position:absolute;top:0;}
 			.article1-right-box{width:203px; height:400px;border-top:2px solid #cc8091;float:right;}
 			.same{margin-top:35px;float:left;}
 			.under{text-decoration:underline;font-size:24px;}
@@ -29,7 +32,7 @@
 			.when{width:30%;}
 			.how{width:30%;}
 			.hei{margin-bottom:10px;}
-			.font1{margin-top:10px;margin-right:15px;line-height:20px;}
+			.font1{margin-top:10px;margin-right:12px;line-height:20px;}
 			.fcolor1{color:#488c5d;}
 			.fcolor2{color:#d19d49;}
 			.fcolor3{color:#cf737e;}
@@ -103,6 +106,8 @@
 						<div class="article1-left-box">
 							<div class="img">
 								<img src="images/1.jpg" width="640" height="300" alt="图片"/>
+								<span class="cover1 cover3"></span>
+								<span class="cover2 cover3"></span>
 							</div>
 							<div class="same what">
 								<a class="under fcolor1" href="#">What</a>
