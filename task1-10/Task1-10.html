@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Task1-10</title>
+		<style>
+			*{padding:0;margin:0;}
+			body{font-size:14px;font-family:"微软雅黑";}
+			.flex-container{
+				box-sizing:border-box;
+				padding:20px;
+			}
+			.row{
+				display:flex;
+				justify-content:space-between;				
+				align-items:flex-start;
+			}
+			.row >div{
+				border:1px solid #f00;
+				width:150px;
+				padding:0;
+				margin-bottom:20px;
+			}
+			/*屏幕宽度大于640*/
+			.col-md-1{
+				height:120px;
+			}
+			.col-md-2{
+				height:100px;
+			}
+			.col-md-3{
+				height:40px;
+			}
+			.col-md-4{
+				height:200px;
+				border:1px solid blue!important;
+			}
+			/*屏幕宽度小于640*/
+			@media all and (max-width:640px){				
+				.col-sm-4{
+					order:-1;
+				}
+				.row{
+					display:flex;
+					align-items:flex-start;
+					flex-wrap:wrap;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="row">
+				<div class="col-md-1 col-sm-1">col-1</div>
+				<div class="col-md-2 col-sm-2">col-2</div>
+				<div class="col-md-3 col-sm-3">col-3</div>
+				<div class="col-md-4 col-sm-4">col-4</div>
+			</div>
+		</div>
+	</body>
+</html>

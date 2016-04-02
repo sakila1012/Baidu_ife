@@ -72,7 +72,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="grid-container">
+		<div class="grid-container outline">
 			<div class="row">
 				<div class="col-md-4 col-sm-6">col-4</div>
 				<div class="col-md-4 col-sm-6">col-4</div>
