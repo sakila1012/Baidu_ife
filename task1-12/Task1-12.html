@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Task1-12</title>
+		<style>
+			*{padding:0;margin:0;}
+			body{font-size:16px;font-family:"微软雅黑";padding:30px;background:#eee;				
+			}
+			ul li{list-style:none;}
+			a{text-decoration:none;}
+			section{margin:10px;}
+			.table{
+				width:300px;
+				height:500px;
+				box-sizing:border-box;
+				line-height:1.42857;				
+			}
+			.table-collapse{border-collapse:collapse;border-spacing:0;}
+			.table-collapse>thead>tr{background:#000;color:#fff;}
+			.table-collapse td, .table-collapse th{padding:10px 15px;}
+			.table-stripe>tbody tr:nth-child(2n){background:#fff;}
+			.form .change{	
+				width:100px;
+				height:20px;
+				transition:width 0.5s ease-in;
+			}
+			.form .change:focus{width:200px;}
+			.banner{width:300px;height:200px;background:pink;position:relative;overflow:hidden;}
+			.banner .banner-color{width:300%;height:200%;position:relative;left:0;transition:left .5s ease;}
+			#img1:target~.banner-color{left:0;}
+			#img2:target~.banner-color{left:-100%;}
+			#img3:target~.banner-color{left:-200%;}
+			.banner .banner-color li{float:left;width:300px;height:200px;}
+			.banner .banner-color li:nth-child(1){background-color:#00f;}
+			.banner .banner-color li:nth-child(2){background-color:#0f0;}
+			.banner .banner-color li:nth-child(3){background-color:#f00;}
+			.banner .control{float:right;position:absolute;bottom:0;right:0;}
+			.banner a{width:20px;height:20px;border:1px solid #fff;float:left;cursor:pointer;margin-left:10px;text-align:center;opacity:0.5;}
+			.banner a:visited{color:#fff;}
+
+		</style>
+	</head>
+	<body>
+		<section class="table">
+			<table class="table-collapse table-stripe">
+				<thead>
+					<tr>
+						<th>排名</th>
+						<th>网站</th>
+						<th>热度</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>百度前端技术学院</td>
+						<td>13000</td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>百度前端技术学院</td>
+						<td>12000</td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>百度前端技术学院</td>
+						<td>11000</td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>百度前端技术学院</td>
+						<td>10000</td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>百度前端技术学院</td>
+						<td>9000</td>
+					</tr>
+					<tr>
+						<td>6.</td>
+						<td>百度前端技术学院</td>
+						<td>8000</td>
+					</tr>
+					<tr>
+						<td>7.</td>
+						<td>百度前端技术学院</td>
+						<td>7000</td>
+					</tr>
+					<tr>
+						<td>8.</td>
+						<td>百度前端技术学院</td>
+						<td>6000</td>
+					</tr>
+					<tr>
+						<td>9.</td>
+						<td>百度前端技术学院</td>
+						<td>5000</td>
+					</tr>
+					<tr>
+						<td>10.</td>
+						<td>百度前端技术学院</td>
+						<td>4000</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<div class="form">
+				<input type="text" class="change" />
+			</div>
+		</section>
+		<section>
+			<div class="banner">
+				<span id="img1"></span>
+				<span id="img2"></span>
+				<span id="img3"></span>
+				<ul class="banner-color">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<div class="control">
+					<a href="#img1">1</a>
+					<a href="#img2">2</a>
+					<a href="#img3">3</a>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
