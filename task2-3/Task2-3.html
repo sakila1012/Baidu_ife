@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>IFE JavaScript Task 03</title>
+		<style>
+			*{padding:0;margin:0;}
+			body{font-size:16px;font-family:"微软雅黑";}
+			ul li{list-style:none;}
+			.wrap{padding:20px;}
+			#sort-btn,#resort{margin-top:20px;}			
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<ul id="source">
+				<li>北京空气质量：<b>90</b></li>
+				<li>上海空气质量：<b>70</b></li>
+				<li>天津空气质量：<b>80</b></li>
+				<li>广州空气质量：<b>50</b></li>
+				<li>深圳空气质量：<b>40</b></li>
+				<li>福州空气质量：<b>32</b></li>
+				<li>成都空气质量：<b>90</b></li>
+			</ul>
+			<ul id="resort">
+				<!--
+					<li>第一名：北京空气质量：<b>90</b></li>
+					<li>第二名：北京空气质量：<b>90</b></li>
+					<li>第三名：北京空气质量：<b>90</b></li>
+				-->
+			</ul>
+			<button id="sort-btn">排序</button>
+		</div>
+		<script type="text/javascript">
+			//初始化
+			function init(){
+				dom("sort-btn").onclick = btnHandle;
+			}
+
+			init();
+			//获取dom对象
+			function dom(id){
+				return document.getElementById(id);
+			}
+			//获取数据
+			function getData(){
+				var ulDom = dom("source");
+				var liDom = ulDom.children;
+				var data = [];
+				for(var i=0;i<liDom.length;i++){
+					var cityName = liDom[i].innerHTML.split("空气质量：")[0];
+					//innerText去除网页标签，但不能兼容firefox
+					var cityNum = liDom[i].innerText.split("空气质量：")[1];
+					data.push([cityName,cityNum]);
+				}			
+
+				return data;
+			}
+			/**
+			*sortAqiData
+			*按空气质量对data进行从小到大的排序
+			*返回一个排序后的数组
+			*/
+			function sortAqiData(data){
+				data.sort(compare);
+				return data;
+			}
+			//比较函数
+			function compare(value1, value2){
+					return value2[1] - value1[1];
+			}
+			/**
+			  *render
+			  *将排好序的城市及空气质量指数，输出显示到id位的resort的列表中
+			  *格式见ul中的注释部分
+			  */
+			function render(data){
+				var ulDom2 = dom("resort");
+				for(var i=0,j=0;j<data.length;j++){
+					var liDom = document.createElement("li");
+					liDom.innerHTML = "第"+(++i)+"名："+data[j][0]+"空气质量：<b>"+data[j][1]+"</b>";
+					ulDom2.appendChild(liDom);
+				}
+			}
+			
+			function btnHandle(){
+				var aqiData = getData();
+				aqiData = sortAqiData(aqiData);
+				render(aqiData);
+				//点击后不能再点击
+				dom("sort-btn").disabled = true;
+			}
+
+		</script>
+	</body>
+</html>
