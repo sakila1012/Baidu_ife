@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<style>
+			*{padding:0;margin:0;}
+			body{font-size:16px;font-family:"微软雅黑";}
+			ul li{list-style:none;}
+			h3{font-size:24px;margin-bottom:20px;}
+			.wrap{padding:20px;}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<h3>污染城市列表</h3>
+			<ul id="aqi-list">
+				<!--
+					<li>第一名：福州（样例），10</li>
+					<li>第二名：福州（样例），10</li>
+				-->
+			</ul>
+		</div>
+		<script>
+			var aqiData = [
+				["北京",90],
+				["上海",50],
+				["福州",10],
+				["广州",50],
+				["成都",90],
+				["西安",100],
+				["南京",95]
+			];
+			(function(){				
+				aqiData.sort(compare);
+				//var sortArray = new Array();
+				var ulDom = dom("aqi-list");
+				for(var i=0,j=0;i<aqiData.length;i++){
+					if(aqiData[i][1]>=60){
+						var liDom = document.createElement("li"); 
+						liDom.innerHTML = "第"+(++j)+"名 : "+aqiData[i][0]+" , "+aqiData[i][1];
+						ulDom.appendChild(liDom);
+					}
+				}				
+				//比较函数
+				function compare(value1, value2){
+					return value2[1] - value1[1];
+				}
+				//获取Dom对象
+				function dom(id){
+					return document.getElementById(id);
+				}
+			})();
+		</script>
+	</body>
+</html>

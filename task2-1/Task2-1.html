@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>JavaScript Task 01</title>
+		<style>
+			*{padding:0;margin:0;}
+			body{font-size:16px;font-family:"微软雅黑";background:#fff;}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<label>请输入今天北京的空气质量：<input id="aqi-input" type="text"/></label>
+			<button id="button" >确认填写</button>
+			<div>您输入的值是：<span id="aqi-display">尚未录入</span></div>
+		</div>
+		<script type="text/javascript">
+			function dom(id) {
+				return document.getElementById(id);
+			}
+			dom("button").onclick = function(){
+				var content = dom("aqi-input").value;
+				//alert(content);
+				var showDom = dom("aqi-display");
+				showDom.innerHTML = content;
+				//alert(showDom.innerHTML)
+			}
+		</script>
+	</body>
+</html>
